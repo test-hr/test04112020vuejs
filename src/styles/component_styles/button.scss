@@ -1,0 +1,29 @@
+@import '../colors.scss';
+
+$--button-medium-padding-vertical: 5px 40px 5px;
+$--button-medium-padding-horizontal: 40px;
+$--border-radius-base: 8px;
+$--button-hover-tint-percent: 0%;
+$--button-font-weight: 500;
+
+.el-button--primary {
+  background-color: $--color-primary;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  padding-top: 10px !important;
+  padding-bottom: 9px !important;
+}
+.el-button--secondary {
+  background-color: $--color-primary;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  padding-top: 10px !important;
+  padding-bottom: 9px !important;
+}
+
+.el-button--primary:focus,
+.el-button--primary:hover {
+  //transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  //background-color: $--color-primary !important;
+}

@@ -1,0 +1,33 @@
+@import './component_styles/button.scss';
+@import './component_styles/input.scss';
+@import './variables.scss';
+
+$theme-color: 'primary';
+
+body {
+  font-family: 'Open Sans', Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, Arial, sans-serif !important;
+}
+
+#app {
+  background-color: #fbfbfd;
+}
+
+h1 {
+  font-size: 24px !important;
+  font-weight: 600 !important;
+}
+
+// styling for toasts
+.toasted.toasted-primary.info {
+  background-color: $--main-grey !important;
+  border-radius: 8px !important;
+}
+.toasted.toasted-primary.error {
+  background-color: $--red !important;
+  border-radius: 8px !important;
+}
+.toasted.toasted-primary.success {
+  background-color: $--color-primary !important;
+  border-radius: 8px !important;
+}

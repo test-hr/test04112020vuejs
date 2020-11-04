@@ -1,0 +1,106 @@
+//
+// Color system
+//
+
+$--color-primary: #37a18b !default;
+
+$white: $--color-white;
+$gray-100: $--background-color-base;
+$gray-200: $--border-color-light;
+$gray-300: #cccccc;
+$gray-400: $--color-text-placeholder;
+$gray-500: $--color-text-secondary;
+$gray-600: $--color-text-regular;
+$gray-700: $--color-text-primary;
+$gray-800: #2d2d2d;
+$gray-900: #262626;
+$gray: $gray-400;
+
+$blue: $--color-primary !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: $--color-danger;
+$orange: $--color-warning !default;
+$yellow: #eb9e05;
+$green: $--color-success;
+$teal: #34f6ac !default;
+$cyan: #01bcd2 !default;
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    'blue': $blue,
+    'indigo': $indigo,
+    'purple': $purple,
+    'pink': $pink,
+    'red': $red,
+    'orange': $orange,
+    'yellow': $yellow,
+    'green': $green,
+    'teal': $teal,
+    'cyan': $cyan,
+    'white': $white,
+    'gray': $gray-400,
+  ),
+  $colors
+);
+
+$primary: $blue;
+$dark: $gray-900;
+$info: $--color-info !default;
+$success: $green !default;
+$warning: $orange !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'primary': $primary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark,
+    'yellow': $yellow,
+    'primary-light': $--color-primary-light-8,
+    'success-light': $--color-success-light,
+    'warning-light': $--color-warning-light,
+    'danger-light': $--color-danger-light,
+    'info-light': $--color-info-light,
+    'primary-lighter': $--color-primary-light-9,
+    'success-lighter': $--color-success-lighter,
+    'warning-lighter': $--color-warning-lighter,
+    'danger-lighter': $--color-danger-lighter,
+    'info-lighter': $--color-info-lighter,
+    'gray-100': $gray-100,
+    'gray-200': $gray-200,
+    'gray-300': $gray-300,
+    'gray-400': $gray-400,
+    'gray-500': $gray-500,
+    'gray-600': $gray-600,
+    'gray-700': $gray-700,
+    'gray': $gray,
+  ),
+  $theme-colors
+);
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-rounded: false;
+$enable-shadows: false;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white;
+$body-color: $gray-700;
+
+// Components
+
+$transition-base: $--all-transition;
