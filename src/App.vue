@@ -1,7 +1,7 @@
 <template>
   <div v-if="width > 800" id="app">
-    <Navbar />
-    <main>
+    <navbar-layout />
+    <main style="padding: 20px;margin: 60px 20px">
       <router-view />
     </main>
   </div>
@@ -17,9 +17,9 @@ import { Component, Provide, Vue } from 'vue-property-decorator';
 import { Modules } from '@/store/Modules';
 import { createUserModule } from '@/modules/user/store/createUserModule';
 import { UserApi } from '@/modules/user/api/UserApi';
-import Navbar from '@/modules/user/components/layout/Navbar.vue';
+import NavbarLayout from '@/shared/layouts/NavbarLayout.vue';
 
-@Component({ components: { Navbar } })
+@Component({ components: { NavbarLayout } })
 export default class App extends Vue {
   @Provide(Modules.USER_MODULE)
   private userModule = createUserModule(this.$store, new UserApi(axios));
@@ -45,7 +45,7 @@ export default class App extends Vue {
 </script>
 
 <style>
-.body {
+body {
   margin: 0px 0px !important;
   width: 100%;
 }
