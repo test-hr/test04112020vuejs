@@ -58,13 +58,15 @@
       </vs-table>
       <span class="data">
         <pre>
-  {{ selected.length > 0 ? selected : 'Select an item in the table' }}
+          {{ selected.length > 0 ? selected : 'Select an item in the table' }}
         </pre>
       </span>
     </div>
   </template>
 
   <script>
+    // this component should have props like: headers data, data, options
+    // we can create dynamic tables
     export default {
       data:() => ({
         allCheck: false,

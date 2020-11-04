@@ -18,23 +18,10 @@
           </div>
         </template>
         <template #right>
-          <!-- <vs-button flat >Login</vs-button>
-          <vs-button>Get Started</vs-button> -->
           <i></i>
           <img src="@/assets/clarity_settings-solid.png" alt="clarity_settings-solid">
         </template>
       </vs-navbar>
-      <!-- <div class="square">
-        <div class="child">
-          child 1
-        </div>
-        <div class="child">
-          child 2
-        </div>
-        <div class="child">
-          child 3
-        </div>
-      </div> -->
     </div>
   </template>
 
@@ -51,7 +38,7 @@
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
 
   .nav-menu {
-      margin: 0 50px;
+      margin: 0 80px;
       & > * {
        padding: 0 20px;   
       }

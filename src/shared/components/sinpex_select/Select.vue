@@ -1,6 +1,10 @@
   <template>
     <div class="center">
       <vs-select placeholder="Select" v-model="value">
+        <!-- maybe next time -->
+        <!-- <vs-option v-for="(user, i) in users" :key="i" :label="`User &{i}`" :value="i">
+          {{user.name}}
+        </vs-option> -->
         <vs-option label="User 1" value="1">
           User 1
         </vs-option>
