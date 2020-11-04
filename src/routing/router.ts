@@ -9,5 +9,15 @@ export const router = new Router({
       name: Routes.USERS,
       component: () => import('@/modules/user/screens/UserListing.vue'),
     },
+    {
+      path: '/todos',
+      name: Routes.TODOS,
+      component: () => import('@/modules/user/screens/TodoListing.vue'),
+    },
+    {
+      path: '/statistics',
+      name: Routes.STATISTICS,
+      component: () => import('@/modules/user/screens/Statistics.vue'),
+    },
   ],
 });

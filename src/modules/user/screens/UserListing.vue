@@ -1,6 +1,7 @@
 <template>
   <div class="user-listing">
-    <user-list :users="users" filter-query="" />
+    <raw-table/>
+
   </div>
 </template>
 
@@ -9,12 +10,12 @@
  * Responsibilities of component: Houses all components regarding the user entity
  */
 import { Component } from 'vue-property-decorator';
-import UserList from '@/modules/user/components/UserList.vue';
+import RawTable from '@/modules/user/components/RawTable.vue';
 import { mixins } from 'vue-class-component';
 import { UserModuleMixin } from '@/modules/user/mixins/UserModuleMixin';
 import { User } from '@/modules/user/User';
 
-@Component({ components: { UserList } })
+@Component({ components: { RawTable } })
 export default class UserListing extends mixins(UserModuleMixin) {
   get users(): User[] {
     return this.userModule.items;
@@ -26,6 +27,8 @@ export default class UserListing extends mixins(UserModuleMixin) {
 .user-listing {
   display: flex;
   height: 100%;
-  width: 100vw;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 </style>

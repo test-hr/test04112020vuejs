@@ -1,12 +1,21 @@
 import '@/styles/index.scss';
 import Vue from 'vue';
 import Router from 'vue-router';
+const Vuesax = require('vuesax');
 import Toasted from 'vue-toasted';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import { router } from '@/routing/router';
 import store from './store';
 import App from './App.vue';
+
+
+import 'vuesax/dist/vuesax.css'; //Vuesax styles
+
+Vue.use(Vuesax, {
+  // options here
+})
+
 
 Vue.use(Router);
 Vue.use(Toasted, {

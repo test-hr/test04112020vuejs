@@ -1,3 +1,5 @@
 export enum Routes {
-  USERS = 'USERS'
+  USERS = 'USERS',
+  TODOS = 'TODOS',
+  STATISTICS = 'STATISTICS'
 }

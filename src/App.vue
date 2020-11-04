@@ -1,6 +1,9 @@
 <template>
   <div v-if="width > 800" id="app">
-    <router-view />
+    <Navbar />
+    <main>
+      <router-view />
+    </main>
   </div>
   <div v-else class="mt-4 text-center">
     Mobile screens are not yet supported.
@@ -14,8 +17,9 @@ import { Component, Provide, Vue } from 'vue-property-decorator';
 import { Modules } from '@/store/Modules';
 import { createUserModule } from '@/modules/user/store/createUserModule';
 import { UserApi } from '@/modules/user/api/UserApi';
+import Navbar from '@/modules/user/components/layout/Navbar.vue';
 
-@Component
+@Component({ components: { Navbar } })
 export default class App extends Vue {
   @Provide(Modules.USER_MODULE)
   private userModule = createUserModule(this.$store, new UserApi(axios));
