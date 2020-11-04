@@ -1,5 +1,6 @@
 <template>
   <div class="user-listing">
+    <h1>Users</h1>
     <raw-table/>
 
   </div>
@@ -10,7 +11,7 @@
  * Responsibilities of component: Houses all components regarding the user entity
  */
 import { Component } from 'vue-property-decorator';
-import RawTable from '@/modules/user/components/RawTable.vue';
+import RawTable from '@/shared/components/sinpex_table/RawTable.vue';
 import { mixins } from 'vue-class-component';
 import { UserModuleMixin } from '@/modules/user/mixins/UserModuleMixin';
 import { User } from '@/modules/user/User';
@@ -25,10 +26,8 @@ export default class UserListing extends mixins(UserModuleMixin) {
 
 <style scoped lang="scss">
 .user-listing {
-  display: flex;
   height: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
-  margin: 0 auto;
 }
 </style>

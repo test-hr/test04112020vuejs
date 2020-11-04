@@ -12,12 +12,12 @@ export const router = new Router({
     {
       path: '/todos',
       name: Routes.TODOS,
-      component: () => import('@/modules/user/screens/TodoListing.vue'),
+      component: () => import('@/modules/todo/screens/TodoListing.vue'),
     },
     {
       path: '/statistics',
       name: Routes.STATISTICS,
-      component: () => import('@/modules/user/screens/Statistics.vue'),
+      component: () => import('@/modules/statistic/screens/Statistics.vue'),
     },
   ],
 });
