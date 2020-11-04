@@ -1,5 +1,9 @@
 <template>
-  <div class="stattistics">
+  <div class="statistics">
+    <h1>Statistics</h1>
+    <div class="card">
+      <bar-chart />
+    </div>
   </div>
 </template>
 
@@ -8,23 +12,27 @@
  * Responsibilities of component: Houses all components regarding the user entity
  */
 import { Component } from 'vue-property-decorator';
-// import UserList from '@/modules/user/components/UserList.vue';
+import BarChart from '@/modules/statistic/components/BarChart.vue';
 import { mixins } from 'vue-class-component';
-// import { UserModuleMixin } from '@/modules/user/mixins/UserModuleMixin';
-// import { User } from '@/modules/user/User';
+import { UserModuleMixin } from '@/modules/user/mixins/UserModuleMixin';
+import { User } from '@/modules/user/User';
 
-// @Component({ components: { UserList } })
-// export default class UserListing extends mixins(UserModuleMixin) {
-  // get users(): User[] {
-  //   return this.userModule.items;
-  // }
-// }
+@Component({ components: { BarChart } })
+export default class UserListing extends mixins(UserModuleMixin) {
+  get users(): User[] {
+    return this.userModule.items;
+  }
+}
 </script>
 
 <style scoped lang="scss">
-.user-listing {
-  display: flex;
+.statistics{
   height: 100%;
-  width: 100vw;
+  width: 100%;
+
+  .card {
+    width: 500px;
+    height: 600px;
+  }
 }
 </style>
