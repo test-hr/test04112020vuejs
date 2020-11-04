@@ -38,7 +38,11 @@
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
 
   .nav-menu {
+<<<<<<< HEAD
       margin: 0 80px;
+=======
+      margin: 0 50px;
+>>>>>>> 6bf750edcfbfc67ed747c092f2bbedf180e620dd
       & > * {
        padding: 0 20px;   
       }
